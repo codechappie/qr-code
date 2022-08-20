@@ -8,6 +8,11 @@ form.addEventListener("submit", e => {
     const size = document.getElementById("size").value;
     const color = document.getElementById("color").value;
 
+    if (url.trim() === "") {
+        return alert("Please enter a valid URL");
+        
+    };
+
     qr.innerHTML = "";
     createQRCode(url, size, color);
 })
@@ -40,6 +45,9 @@ document.querySelectorAll(".form__control__input").forEach(input => {
 
 document.getElementById("download__qr").addEventListener("click", e => {
     let buttonDownload = document.getElementById("download__qr");
+    if (document.querySelector("#img").innerHTML === "") {
+        return;
+    }
     buttonDownload.style.display = "none";
     var c = document.querySelector('.qrcode__container');
     html2canvas(c).then(canvas => {

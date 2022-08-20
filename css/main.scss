@@ -261,6 +261,7 @@ html {
       max-width: 400px;
       width: 100%;
       margin: 0 auto;
+      padding: 20px;
 
       @media screen and (max-width: 840px){
         min-width: 90%;
@@ -268,12 +269,14 @@ html {
       h1 {
         color: #ffffff;
         margin: 10px auto;
+        text-align: center;
+        overflow-wrap: anywhere;
       }
       .qrcode {
         aspect-ratio: 1/1;
         background: #ffffff;
         width: 200px;
-        margin: 50px auto 20px auto;
+        margin: 30px auto 20px auto;
         padding: 20px;
         border-radius: 10px;
         img {
