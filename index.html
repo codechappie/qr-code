@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/qrcode.min.js"></script>
+    <script src="./js/html2canvas.js"></script>
+    <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+
+    <div class="qrapp__wrapper">
+        <nav>
+            <div class="nav__container">
+                <div class="logo">
+                    <img src="./images/qr-regular-24.png" alt="">
+                </div>
+
+                <a href="" class="github">
+                    <img src="./images/github-logo-24.png" alt="">
+                </a>
+            </div>
+        </nav>
+
+        <main>
+            <form id="qrform" class="form__container">
+                <h1>Generador de Códigos QR</h1>
+                <p>Crea códigos QR, solo ingresa un enlace o texto selecciona el tamaño y color. Luego descarga el
+                    código qr.</p>
+                <div class="form__control__input ">
+                    <label for="url">Ingresa una URL</label>
+                    <input id="url" type="text">
+                    <span class="bottom__simple__line"></span>
+                    <span class="bottom__line"></span>
+                </div>
+
+                <div class="form__control">
+                    <label for="size">Tamaño:</label>
+                    <select id="size">
+                        <option value="100">100x100</option>
+                        <option value="300">300x300</option>
+                        <option value="500">500x500</option>
+                    </select>
+                </div>
+                <div class="form__control">
+                    <label for="color">Color:</label>
+                    <div class="color__wrapper">
+                        <input type="color" id="color">
+                    </div>
+                </div>
+                <button class="generate__button" type="submit">
+                    Generar QR
+                </button>
+            </form>
+
+            <div class="qrcode__container">
+                <div id="qrcode" class="qrcode">
+                    <img src="./images/qrcodechappie.png" alt="">
+                </div>
+                <button id="download__qr" class="download__button">
+                    Descargar QR
+                </button>
+                <h1 id="card__url"></h1>
+                <div id="img" style="z-index: -99999; position: absolute;visibility: hidden;"></div>
+                <div id="imgf" style="display: none;">
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+</body>
+
+</html>
